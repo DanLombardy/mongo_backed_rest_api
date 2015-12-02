@@ -13,7 +13,9 @@
   "author": "Dan Lombardy",
   "license": "MIT",
   "dependencies": {
+    "bcrypt": "latest",
     "body-parser": "^1.14.1",
+    "eat": "^0.1.1",
     "express": "^4.13.3",
     "gulp": "^3.9.0",
     "mongoose": "^4.2.5"
