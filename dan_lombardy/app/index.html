@@ -31,8 +31,8 @@
 
   <section class="in-message-container flex-size-md flex-size-mobile center-margin"  >
     <section>
-      <h2>Available Messages</h2>
-      <ul id="messageList" >
+
+      <div data-listing-directive data-title="Available Messages" >
         <li data-ng-repeat="message in messages">{{message.oneWordTitle}}
           <form name="messageForm{{message._id}}" data-ng-submit="update(message)" data-ng-if="message.editing">
             <h2>Modify Message </h2>
@@ -53,7 +53,7 @@
           <button data-ng-if="!message.editing" data-ng-click="editMsg(message)"> Edit Message</button>
           <button data-ng-if="!message.editing" data-ng-click="remove(message)"> Delete Message</button>
         </li>
-      </ul>
+      </div>
     </section>
     <section  data-ng-if="messageView" class="tertiary-box">
         <h2>view me</h2>
@@ -63,7 +63,7 @@
           <li>Destruct Message: {{messageView.destructMessage}}</li>
           <li>Priority: {{messageView.priority}}</li>
         </ul>
-      <button data-ng-click="close()">Close</button>
+      <div data-button-directive closer="close()"></div>
     </section>
   </section>
 
